@@ -1,0 +1,107 @@
+/* core */
+body {
+    max-width: 550px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    --greenish: #29D78A;
+    --blueish: #6EF2F2;
+    --reddish: #E82D70;
+    --orangeish: #F06957;
+}
+
+#dog {
+    background-image: url(./imagesHTML/dog3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.app {
+    width: 550px;
+    border: 6px solid black;
+    border-radius: 24px;
+    padding: 8px;
+    margin: auto;
+}
+
+/* core-text */
+.like, #like-btn {
+    border-image: linear-gradient(to left, var(--greenish), var(--blueish)) 1;
+    background: linear-gradient(to left, var(--greenish), var(--blueish));
+}
+
+.nope, #reject-btn {
+    background: linear-gradient(to right, var(--reddish), var(--orangeish));
+    border-image: linear-gradient(to right, var(--reddish), var(--orangeish)) 1;
+}
+
+.like, .nope {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-width: 5px;
+    border-style: solid;
+    width: 132px;
+    text-align: center;
+    font-size: 3rem;
+    margin-left: 40px;
+    transform: rotateY(0deg) rotate(-30deg);
+    display: none;
+    border-radius: 8px;
+    /* border-radius doesn't work... why? */
+}
+
+#dog-description {
+    color: white;
+    padding: 4px;
+    text-shadow: 0px 0px 3px black;
+}
+
+/* head */
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    font-size: 1.5rem;
+}
+
+#dog-paw {
+    font-size: 1rem;
+    background: linear-gradient(to right, var(--reddish), var(--orangeish));
+    text-align: center;
+    padding: 8px 24px;
+    border-radius: 16px;
+}
+
+/* buttons */
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+#reject-btn, #like-btn {
+    font-weight: bold;
+    font-size: 3rem;
+    border-radius: 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    padding: 0 12px;
+    margin: 6px;
+    box-shadow: 0px 0px 4px black;
+}
+
+#reject-btn:hover, #like-btn:hover,
+#reject-btn:focus, #like-btn:focus {
+    transform: scale(1.05);
+    cursor: pointer;
+}
